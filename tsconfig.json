@@ -1,10 +1,31 @@
 {
-  "extends": "../tsconfig.json",
-  "exclude": ["node_modules", "dist", "**/*.test.ts"],
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "types": ["node", "jest"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  },
   "include": [
     "**/*"
   ],
-  "compilerOptions": {
-    "outDir": "./dist"
-  }
+  "exclude": ["node_modules/**/*"]
 }
